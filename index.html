@@ -1,167 +1,175 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>VC evaluation</title>
+	<meta charset="UTF-8">
+	<title>Demo results</title>
 
 </head>
 
 <body>
 	<header>
-	<div class="header">
-		<h1>歌聲真假音評測</h1>
-	</div>
+		<div class="header">
+			<h1>語音輸入創作節奏辨識結果</h1>
+		</div>
 	</header>
-	<p>以下會有十個音檔，請聽完評測真假音程度與音質</p>
-	<p>真假音程度: 1假 2偏假 3介於中間 4偏真 5真</p>
-	<p>音質: 1極差 2差 3一般 4良好 5極優</p>
-	<p>請<b>帶上耳機</b>聆聽下列十句歌曲，評估歌曲的真假音程度與音質。並<a href="https://forms.gle/Z9BQ6D7yxZcjk6YVA" target="_blank">填寫此表單</a>。</b></p>
+	<p>以下為本次專題的合成結果</p>
+	<p>同一組音檔用的是同樣的Ground Truth音檔</p>
 	<hr>
 
 
-  <form id="myForm">
-	<div style="float: left; margin-right:20px">
-		<table border=1 id="cssTable">
-		<!-- row -1 -->
-			<tr>
-				<td align="center"><b>真音範例</b></td>
-				<td>
-					<br />
-					<audio controls id="player" style="height:35px; width:240px;">>
-						<source src="293000/cpsynF0cv-s36_chest_03.wav" type="audio/wav">
-					</audio>
-				</td>
-			</tr>
-			
-			<!-- row 0 -->
-			<tr>
-				<td align="center"><b>假音範例</b></td>
-				<td>
-					<br />
-					<audio controls id="player" style="height:35px; width:240px;">>
-						<source src="293000/cpsynF0cv-s29_falset_seg8.wav" type="audio/wav">
-					</audio>
-				</td>
-			</tr>
-		<!-- row 1 -->
-		<tr>
-		<td align="center"><b>音檔1</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/cpsynF0cv-s22_falset_seg4.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+	<form id="myForm">
+		<div style="float: left; margin-right:20px">
+			<table border=1 id="cssTable">
+				<!-- row 0 -->
+				<tr>
+					<td align="center"><b>範例1 Ground Truth</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su_GroundTruth.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 2 -->
-		<tr>
-		<td align="center"><b>音檔2</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s22_falset_seg4-vcto-chest.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 1 -->
+				<tr>
+					<td align="center"><b>範例 1-1</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su1.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
+				<!-- row 2 -->
+				<tr>
+					<td align="center"><b>範例 1-2</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su2.wav"  type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 3 -->
-		<tr>
-		<td align="center"><b>音檔3</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/cpsynF0cv-s11_chest_seg13.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 3 -->
+				<tr>
+					<td align="center"><b>範例 1-3</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su3.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 4 -->
-		<tr>
-		<td align="center"><b>音檔4</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s11_chest_seg13-vcto-falset.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 4 -->
+				<tr>
+					<td align="center"><b>範例 1-4</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su4.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 5 -->
-		<tr>
-		<td align="center"><b>音檔5</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s16_falset_seg4-vcto-chest.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
-		</table>
+				<!-- row 5 -->
+				<tr>
+					<td align="center"><b>範例 1-5</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su5.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
+
+				<!-- row 6 -->
+				<tr>
+					<td align="center"><b>範例 1-6</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="Demo_result/Su6.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
+				<!-- row 7 -->
+				<tr>
+					<td align="center"><b>假音轉真音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s16_falset_seg4-vcto-chest.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>				
+			</table>
 		</div>
 
 		<div style="float: left; margin-right:20px">
 
-		<table border=1 id="cssTable">
+			<table border=1 id="cssTable">
 
-		<!-- row 1 -->
-		<tr>
-		<td align="center"><b>音檔6</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s17_chest_seg4-vcto-falset.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 1 -->
+				<tr>
+					<td align="center"><b>真音轉假音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s17_chest_seg4-vcto-falset.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 2 -->
-		<tr>
-		<td align="center"><b>音檔7</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s17_chest_seg4-vcto-falset-f0-2.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 2 -->
+				<tr>
+					<td align="center"><b>真音轉假音且調升一全音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s17_chest_seg4-vcto-falset-f0-2.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 3 -->
-		<tr>
-		<td align="center"><b>音檔8</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s22_falset_seg4-vcto-chest-f0-2.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 3 -->
+				<tr>
+					<td align="center"><b>假音轉真音且調降一全音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s22_falset_seg4-vcto-chest-f0-2.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 4 -->
-		<tr>
-		<td align="center"><b>音檔9</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s11_chest_seg13-vcto-falset-f0-2.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 4 -->
+				<tr>
+					<td align="center"><b>真音轉假音且調升一全音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s11_chest_seg13-vcto-falset-f0-2.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		<!-- row 5 -->
-		<tr>
-		<td align="center"><b>音檔10</b></td>
-		<td>
-			<br/>
-			<audio controls id="player" style="height:35px; width:240px;">>
-			  <source src="293000/s16_falset_seg4-vcto-chest-f0-2.wav" type="audio/wav">
-			</audio>
-		</td>
-		</tr>
+				<!-- row 5 -->
+				<tr>
+					<td align="center"><b>真音轉假音且調升一全音</b></td>
+					<td>
+						<br />
+						<audio controls id="player" style="height:35px; width:240px;">>
+							<source src="../293000/s16_falset_seg4-vcto-chest-f0-2.wav" type="audio/wav">
+						</audio>
+					</td>
+				</tr>
 
-		</table>
-  </form>
+			</table>
+	</form>
 </body>
 
 </html>
-
